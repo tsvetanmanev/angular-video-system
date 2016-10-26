@@ -12,5 +12,5 @@ angular.module('myApp.view1', ['ngRoute', 'myApp.videos'])
 
 .controller('View1Ctrl', ['$scope', 'videos', function($scope, videos) {
     $scope.videos = videos.getAllVideos();
-    console.log($scope.videos);
+    console.log("View1");
 }]);
