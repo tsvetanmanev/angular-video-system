@@ -8,7 +8,7 @@ angular.module('myApp.videos', [])
 
         videosArray.push({
             title: 'Course introduction',
-            pictureUrl: 'http://softuni.bg/picture.png',
+            pictureUrl: 'http://www.highdefgeek.com/wp-content/uploads/2016/01/online_classes_casey.jpg',
             length: '3:32',
             category: 'IT',
             subscribers: 3,
@@ -28,7 +28,7 @@ angular.module('myApp.videos', [])
 
         videosArray.push({
             title: 'Cats dance',
-            pictureUrl: 'http://softuni.bg/picture.png',
+            pictureUrl: 'https://farm4.staticflickr.com/3363/3659858487_3c615b01b9.jpg',
             length: '5:32',
             category: 'Fun',
             subscribers: 2,

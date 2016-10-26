@@ -1,4 +1,19 @@
 <p>Home page</p>
 <div ng-repeat="video in videos">
-    <p>{{video.title}}<p>
-</div>
+	<div class="main-grid">
+		<div class="top-grid-video">
+			<img class="video-image" ng-src="{{video.pictureUrl}}" alt="{{video.title}}">
+			<div class="length">{{video.length}}</div>
+		</div>
+		<div class="bot-grid-info">
+			<h3 class="title-info">{{video.title}}</h3>
+			<ul>
+				<li>
+					<p class="category">{{video.category}}</p>
+				</li>
+				<li class="right-list">
+					<p class="subscribers">{{video.subscribers}} views</p>
+				</li>
+			</ul>
+		</div>
+	</div>
