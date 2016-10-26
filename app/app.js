@@ -1,10 +1,6 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-// Lets test something
-//pls commit this now
-//Now I said it
-//Push this
 angular.module('myApp', [
   'ngRoute',
   'myApp.view1',

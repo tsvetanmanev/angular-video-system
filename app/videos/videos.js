@@ -2,7 +2,7 @@
 
 angular.module('myApp.videos', [])
 
-    .factory('videos', function (){
+    .factory('videos', function videos(){
         
         var videosArray = [];
 
@@ -45,18 +45,18 @@ angular.module('myApp.videos', [])
                         ]
         });
 
-        function save (video){
+        function addVideo (video){
             videosArray.push(video);
         }
 
-        function list (){
+        function getAllVideos (){
             return videosArray;
         }
         
 
         return{
-            list : list,
-            save: save
-            };
+            getAllVideos : getAllVideos,
+            addVideo: addVideo,
+            }
 
     });
