@@ -1,4 +1,5 @@
 'use strict';
+// Let's do this!
 
 angular.module('myApp.view1', ['ngRoute', 'myApp.videos'])
 
