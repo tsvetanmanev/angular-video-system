@@ -11,6 +11,4 @@ angular.module('myApp.viewHome', ['ngRoute', 'myApp.videos'])
 
     .controller('ViewHomeCtrl', ['$scope', 'videos', function($scope, videos){
         $scope.videos = videos.getAllVideos();
-        console.log("View Home")
-        console.log($scope.videos);
     }])
