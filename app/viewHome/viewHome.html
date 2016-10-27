@@ -1,5 +1,20 @@
 <p>Home page</p>
-<div ng-repeat="video in videos">
+<label for="filterCategory">Category:</label>
+<select name="filterCategory" ng-model="filter.category">
+	<option value="IT">IT</option>
+	<option value="Nature">Nature</option>
+	<option value="Pets">Pets</option>
+	<option value="Home">Home</option>
+	<option value="Music">Music</option>
+	<option value="Food">Food</option>
+</select>
+</br>
+<label for="subtitles">Subtitles:</label>
+<input name="subtitles" value="true" type="checkbox" ng-model="filter.haveSubtitles"/>
+</br>
+<label for="date">Date:</label>
+<input type="date" name="date" ng-model="filter.date"/>
+<div ng-repeat="video in videos | filter: filter">
 	<div class="main-grid">
 		<div class="top-grid-video">
 			<img class="video-image" ng-src="{{video.pictureUrl}}" alt="{{video.title}}">
