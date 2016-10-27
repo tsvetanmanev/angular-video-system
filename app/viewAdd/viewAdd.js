@@ -9,6 +9,5 @@ angular.module('myApp.viewAdd', ['ngRoute', 'myApp.videos'])
     }])
 
     .controller('ViewAddCtrl', ['$scope', 'videos', function($scope, videos){
-        var hello = "zdrasti!, Dobavi video tuk";
-        $scope.hello = hello;
+        console.log($scope.video)
     }])

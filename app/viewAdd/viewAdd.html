@@ -1,2 +1,18 @@
 <p>Here you can add a video</p>
-<div>{{hello}}</div>
+<form name="addVideo" class="addVideo-form">
+    <label for="title">Title:</label>
+    <input type="text" name="title" ng-model="video.title"/>
+    <br/>
+    <label for="category">Category:</label>
+    <select name="category" ng-model="video.category">
+        <option value="IT">IT</option>
+        <option value="Nature">Nature</option>
+        <option value="Pets">Pets</option>
+        <option value="Home">Home</option>
+        <option value="Music">Music</option>
+        <option value="Food">Food</option>
+    </select>
+    <br/>
+    <label for="subtitles">Subtitles:</label>
+    <input type="checkbox" name="subtitles" ng-model="video.haveSubtitles">
+</form>
