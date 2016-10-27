@@ -10,11 +10,19 @@
 </select>
 </br>
 <label for="subtitles">Subtitles:</label>
-<input name="subtitles" value="true" type="checkbox" ng-model="filter.haveSubtitles"/>
+<input name="subtitles" value="true" type="checkbox" ng-model="filter.haveSubtitles" />
 </br>
 <label for="date">Date:</label>
-<input type="date" name="date" ng-model="filter.date"/>
-<div ng-repeat="video in videos | filter: filter">
+<input type="date" name="date" ng-model="filter.date" />
+</br>
+<label for="sortBy">Sort by:</label>
+<select name="sortBy" ng-model="orderBy">
+	<option value="title">Title</option>
+	<option value="length">Length</option>
+	<option value="date">Date</option>
+	<option value="subscribers">Subscribers</option>
+</select>
+<div ng-repeat="video in videos | filter: filter | orderBy: orderBy">
 	<div class="main-grid">
 		<div class="top-grid-video">
 			<img class="video-image" ng-src="{{video.pictureUrl}}" alt="{{video.title}}">
@@ -27,7 +35,7 @@
 					<p class="category">{{video.category}}</p>
 				</li>
 				<li class="right-list">
-					<p class="subscribers">{{video.subscribers}} views</p>
+					<p class="subscribers">{{video.subscribers}} subscribers</p>
 				</li>
 			</ul>
 		</div>
