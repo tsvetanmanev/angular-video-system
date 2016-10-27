@@ -30,6 +30,10 @@
   margin: 10px;
 }
 
+.main-grid *{
+  margin: 2px;
+}
+
 .video-image {
   width: 400px;
   height: 250px;
@@ -37,4 +41,14 @@
 
 .addVideo-form{
   margin: 10px;
+}
+
+input.ng-invalid.ng-touched {
+    background-color: pink;
+}
+input.ng-valid.ng-touched  {
+    background-color: lightgreen;
+}
+button:disabled{
+  color: gray;
 }

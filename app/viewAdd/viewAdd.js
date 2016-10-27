@@ -9,5 +9,8 @@ angular.module('myApp.viewAdd', ['ngRoute', 'myApp.videos'])
     }])
 
     .controller('ViewAddCtrl', ['$scope', 'videos', function($scope, videos){
-        console.log($scope.video)
+
+        $scope.submit = function (video){
+            videos.addVideo(video);
+        };
     }])

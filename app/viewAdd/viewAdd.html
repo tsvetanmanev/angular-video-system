@@ -1,10 +1,11 @@
 <p>Here you can add a video</p>
-<form name="addVideo" class="addVideo-form">
+<form name="addVideoForm" class="addVideo-form">
     <label for="title">Title:</label>
-    <input type="text" name="title" ng-model="video.title"/>
+    <input type="text" name="title" ng-model="video.title" required/>
+    <span ng-show="addVideoForm.title.$touched && addVideoForm.title.$invalid">The title is required</span>
     <br/>
     <label for="category">Category:</label>
-    <select name="category" ng-model="video.category">
+    <select name="category" ng-model="video.category" required>
         <option value="IT">IT</option>
         <option value="Nature">Nature</option>
         <option value="Pets">Pets</option>
@@ -15,4 +16,8 @@
     <br/>
     <label for="subtitles">Subtitles:</label>
     <input type="checkbox" name="subtitles" ng-model="video.haveSubtitles">
+    <br/>
+    <label for="pictureUrl">Picture URL Address:</label>
+    <input type="url" name="pictureUrl" ng-model="video.pictureUrl" required/>
+    <button ng-click="submit(video)" ng-disabled="addVideoForm.$invalid" >Submit</button>
 </form>
